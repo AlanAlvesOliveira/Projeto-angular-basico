@@ -1,27 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { PensamentoComponent } from '../pensamento/pensamento.component';
-import {NgFor,NgIf} from '@angular/common'
+import { NgFor, NgIf } from '@angular/common'
+import { Pensamento } from '../interfaces/pensamento';
+import { PensamentoService } from '../pensamento.service';
 
 
 
 @Component({
   selector: 'app-listar-pensamento',
   standalone: true,
-  imports: [RouterLink, PensamentoComponent,NgFor,NgIf],
+  imports: [RouterLink, PensamentoComponent, NgFor, NgIf],
   templateUrl: './listar-pensamento.component.html',
   styleUrl: './listar-pensamento.component.css'
 })
-export class ListarPensamentoComponent {
+export class ListarPensamentoComponent implements OnInit {
 
-  listaPensamentos = [{
-    conteudo: 'I love Angular',
-    autoria: 'Nay',
-    modelo: 'modelo3'
-  },{
-    conteudo: 'I love Angular I love Angula ',
-    autoria: 'Nay',
-    modelo: 'modelo3'
-  }];
+  listaPensamentos: Pensamento[] = [];
+
+  constructor(private service: PensamentoService) { }
+
+  ngOnInit(): void {
+    this.service.listar().subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos
+    });
+  }
 
 }
