@@ -13,7 +13,8 @@ import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pens
     CabecalhoComponent,
     RodapeComponent,
     CriarPensamentoComponent,
-    ListarPensamentoComponent],
+    ListarPensamentoComponent,
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
