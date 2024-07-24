@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './criar-pensamento.component.html',
   styleUrls: ['./criar-pensamento.component.css'],
   standalone: true,
-  imports: [],
+  imports: [FormsModule,RouterLink],
 })
 
 export class CriarPensamentoComponent implements OnInit {
