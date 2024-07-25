@@ -19,10 +19,22 @@
       "modelo": "modelo3"
     },
     {
-      "id": "d351",
-      "conteudo": "teste",
-      "autoria": "aut teste",
+      "id": "6562",
+      "conteudo": "After years of working with Angular, I just figured out I can simply console. log(this) and check the status of all variables at current component. You could just use the Angular dev extension for the browser. That would allow you to see the properties in real-time.",
+      "autoria": "Alan Oliveira",
       "modelo": "modelo1"
+    },
+    {
+      "id": "493f",
+      "conteudo": "teste",
+      "autoria": "Hiago",
+      "modelo": "modelo2"
+    },
+    {
+      "id": "fdac",
+      "conteudo": "teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste teste ",
+      "autoria": "fsdfa",
+      "modelo": "modelo3"
     }
   ]
 }
